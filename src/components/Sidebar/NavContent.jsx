@@ -144,6 +144,18 @@ function NavContent() {
             </div>
           </div>
         </div>
+        <div className="other-apps-container">
+          <Divider color="secondary" />
+          <div className="other-apps">
+            <Link href="https://www.olympusdao.finance/pro" target="_blank" className="other-app">
+              <Typography variant="body1">
+                <SvgIcon color="primary" component={OlympusIcon} />
+                Olympus Pro
+              </Typography>
+            </Link>
+          </div>
+          <Divider color="secondary" />
+        </div>
         <Box className="dapp-menu-bottom" display="flex" justifyContent="space-between" flexDirection="column">
           <div className="dapp-menu-external-links">
             {Object.keys(externalUrls).map((link, i) => {
@@ -154,19 +166,6 @@ function NavContent() {
                 </Link>
               );
             })}
-          </div>
-          <div className="other-apps-container">
-            <Divider color="secondary" />
-            <div className="other-apps">
-              <Typography variant="h6">Other Apps</Typography>
-              <Link href="https://www.olympusdao.finance/pro" target="_blank" className="other-app">
-                <Typography variant="body1">
-                  <SvgIcon color="primary" component={OlympusIcon} />
-                  Olympus Pro
-                </Typography>
-              </Link>
-            </div>
-            <Divider color="secondary" />
           </div>
           <div className="dapp-menu-social">
             <Social />
