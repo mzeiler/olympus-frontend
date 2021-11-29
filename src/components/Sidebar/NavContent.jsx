@@ -7,6 +7,7 @@ import { ReactComponent as BondIcon } from "../../assets/icons/bond.svg";
 import { ReactComponent as DashboardIcon } from "../../assets/icons/dashboard.svg";
 import { ReactComponent as OlympusIcon } from "../../assets/icons/olympus-nav-header.svg";
 import { ReactComponent as PoolTogetherIcon } from "../../assets/icons/33-together.svg";
+import { ReactComponent as ArrowUpIcon } from "../../assets/icons/arrow-up.svg";
 import { trim, shorten } from "../../helpers";
 import { useAddress, useWeb3Context } from "src/hooks/web3Context";
 import useBonds from "../../hooks/Bonds";
@@ -144,25 +145,27 @@ function NavContent() {
             </div>
           </div>
         </div>
-        <div className="other-apps-container">
-          <Divider color="secondary" />
-          <div className="other-apps">
-            <Link href="https://www.olympusdao.finance/pro" target="_blank" className="other-app">
-              <Typography variant="body1">
-                <SvgIcon color="primary" component={OlympusIcon} />
+        <Box className="dapp-menu-middle" display="flex" justifyContent="space-between" flexDirection="column">
+          <Divider color="secondary" className="dapp-menu-divider" />
+          <div className="dapp-menu-other-apps">
+            <Link href="https://www.olympusdao.finance/pro" target="_blank">
+              <Typography variant="h6">
+                <SvgIcon color="primary" component={DashboardIcon} />
                 Olympus Pro
+                <SvgIcon color="primary" component={ArrowUpIcon} className="dapp-menu-app-link-icon" />
               </Typography>
             </Link>
           </div>
-          <Divider color="secondary" />
-        </div>
+          <Divider color="secondary" className="dapp-menu-divider" />
+        </Box>
         <Box className="dapp-menu-bottom" display="flex" justifyContent="space-between" flexDirection="column">
           <div className="dapp-menu-external-links">
             {Object.keys(externalUrls).map((link, i) => {
               return (
-                <Link key={i} href={`${externalUrls[link].url}`} target="_blank">
+                <Link key={i} href={`${externalUrls[link].url}`} target="_blank" className="dapp-menu-external-link">
                   <Typography variant="h6">{externalUrls[link].icon}</Typography>
                   <Typography variant="h6">{externalUrls[link].title}</Typography>
+                  <SvgIcon color="primary" component={ArrowUpIcon} className="dapp-menu-external-link-icon" />
                 </Link>
               );
             })}

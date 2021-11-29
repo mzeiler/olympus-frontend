@@ -4,6 +4,37 @@
   border-radius: 0 !important;
 }
 
+.dapp-menu-other-apps {
+  align-items: center;
+  margin-left: 33px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  a {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  a svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  .dapp-menu-app-link-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 12px;
+    opacity: 0;
+    vertical-align: middle;
+  }
+}
+
+.dapp-menu-other-apps:hover {
+  .dapp-menu-app-link-icon {
+    opacity: 100%;
+  }
+}
+
 .MuiDrawer-paper .MuiPaper-root {
   border-radius: 0 !important;
 }
@@ -44,7 +75,7 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  margin-bottom: 33px;
+  margin-bottom: 16px;
   min-height: max-content;
   .dapp-nav {
     display: flex;
@@ -55,6 +86,12 @@
 .dapp-menu-bottom {
   height: 40vh;
   min-height: 30vh;
+  margin-top: 16px;
+}
+
+.dapp-menu-divider {
+  width: 90%;
+  align-self: center;
 }
 
 .dapp-menu-links {
@@ -96,6 +133,20 @@
     height: 20px;
     margin-right: 12px;
     vertical-align: middle;
+  }
+  .dapp-menu-external-link {
+    .dapp-menu-external-link-icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-left: 12px;
+      opacity: 0%;
+    }
+  }
+  .dapp-menu-external-link:hover {
+    .dapp-menu-external-link-icon {
+      opacity: 100%;
+    }
   }
 }
 
